@@ -31,7 +31,7 @@ https://www.w3schools.com/js/js_htmldom_document.asp
         const list = document.getElementById("dataList");
         let note = document.createElement("li");
         note.innerText = document.getElementById("textArea").value;
-        list.appendChild(note);
+        list.appendChild(note.trim());
       }
     </script>
 
