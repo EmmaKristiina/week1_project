@@ -31,7 +31,7 @@ https://www.w3schools.com/js/js_htmldom_document.asp
         const list = document.getElementById("dataList");
         let note = document.createElement("li");
         note.innerText = document.getElementById("textArea").value;
-        list.appendChild(note.trim());
+        list.appendChild(note);
       }
     </script>
 
@@ -47,8 +47,7 @@ const inputText = document.getElementById("addtext"); -->
       <div id="add-data" onclick="addelement()">add button</div>
     </button>
 
-    <textarea id="textArea">
-    </textarea>
+   <textarea id="textArea"></textarea>
 
     <ul id="dataList"></ul>
   </body>
