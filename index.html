@@ -1,0 +1,55 @@
+<!-- Lähteinä käytetty: 
+https://www.w3schools.com/jsref/met_node_appendchild.asp
+https://www.w3schools.com/js/js_htmldom_events.asp
+https://www.w3schools.com/jsref/prop_html_innerhtml.asp
+https://www.w3schools.com/jsref/event_onclick.asp
+https://www.w3schools.com/html/html_elements.asp
+https://www.w3schools.com/js/js_htmldom_document.asp
++ luento ja kurssimateriaalit esim lähdekoodit luentoihin
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div id="app"></div>
+
+    <script src="src/index.js"></script>
+
+    <script type="text/javascript">
+      function con() {
+        console.log("hello world");
+        document.getElementById("teksti").innerHTML = "My notebook";
+      }
+    </script>
+
+    <script type="text/javascript">
+      function addelement() {
+        const list = document.getElementById("dataList");
+        let note = document.createElement("li");
+        note.innerText = document.getElementById("textArea").value;
+        list.appendChild(note);
+      }
+    </script>
+
+    <!-- document.getElementById("add-data").appendChild(note);
+const inputText = document.getElementById("addtext"); -->
+    <h1 id="teksti">Hello world!</h1>
+
+    <button type="button">
+      <div id="but" onclick="con()">my-button</div>
+    </button>
+
+    <button type="button">
+      <div id="but2" onclick="addelement()">add button</div>
+    </button>
+
+    <textarea id="textArea" rows="1" cols="25" placeholder="add text">
+    </textarea>
+
+    <ul id="dataList"></ul>
+  </body>
+</html>
